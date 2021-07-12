@@ -1,0 +1,19 @@
+<div class="container">
+    <button (click)="getService()" routerLink="/">Check updates</button>
+    <hr>
+    <div *ngIf="toUpdateCount && !buttonClicked else elseBlock" class="container">
+        <span><a routerLink="/display" routerLinkActive="active">
+                <p>There are {{toUpdateCount}} available updates</p>
+                <p>Do you want to do the update ?</p>
+            </a>
+            <button routerLink="/display" (click)="WantSee()">Yes </button>
+            <button routerLink="/" (click)="NotWantSee()">No </button>
+        </span>
+
+    </div>
+    <ng-template #elseBlock>
+        <p *ngIf="toUpdateCount===0">There are no available updates</p>
+
+    </ng-template>
+
+</div>

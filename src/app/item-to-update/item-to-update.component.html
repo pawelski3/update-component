@@ -1,0 +1,16 @@
+<div class="container">
+    <div>
+        Program name: {{toUpdateElement.name}}
+    </div>
+    <p>Size: {{toUpdateElement.size}} MB</p>
+    <p>Status: {{toUpdateElement.status}}</p>
+    <p>Progress: {{toUpdateElement.progress}}</p>
+    <button id="button1" [disabled]="buttonDisabled === true" *ngIf='toUpdateElement.status!="Updated" else elseBlock'
+        (click)="runUpdate()">Update</button>
+    <div *ngIf='progressVisible === true && toUpdateElement.status!="Updated"'><progress id="progressBar" value="0"></progress></div> 
+    <div id="timeInfo"></div>
+    <ng-template #elseBlock>
+        <div>Application is ready to use.</div>
+    </ng-template>
+    <button routerLink="/display">Back to the list</button>
+</div>

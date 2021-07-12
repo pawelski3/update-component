@@ -1,0 +1,24 @@
+.container{
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    text-align: center;
+}
+
+table{
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    text-align: center;
+}
+
+.head td{
+    border-bottom: 2px solid rgb(0, 0, 0);
+    font-size: 32px;
+    
+}
+.link{
+    cursor:pointer;
+}

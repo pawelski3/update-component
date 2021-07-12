@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>List of all available updates</h4>
+  <table class="table">
+    <tr class="head">
+      <td>Ln</td>
+      <td>Program name</td>
+      <td>Size</td>
+      <td>Status</td>
+      <td>Progress</td>
+    </tr>
+
+
+    <tr class="link" *ngFor="let item of elementsToUpdate;let i=index" routerLink="/itemToUpdate/{{i+1}}">
+
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.size}} MB</td>
+      <td>{{item.status}}</td>
+      <td>{{item.progress}}</td>
+    </tr>
+  </table>
+</div>
