@@ -43,3 +43,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+/elkt-win32-x64
+/elkt-mas-arm64
+/elkt-linux-x64
+/elkt-linux-armv7l
